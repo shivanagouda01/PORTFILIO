@@ -74,19 +74,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start"
+            className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center md:justify-start"
           >
             <a
               href="https://webnixo.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-5 rounded-xl bg-brand-primary text-white font-bold hover:bg-brand-primary/90 transition-all w-full sm:w-auto text-center shadow-lg shadow-brand-primary/20 hover:shadow-brand-primary/40 hover:-translate-y-1 active:translate-y-0"
+              className="px-8 sm:px-10 py-4 sm:py-5 rounded-xl bg-brand-primary text-white font-bold hover:bg-brand-primary/90 transition-all w-full sm:w-auto text-center shadow-lg shadow-brand-primary/20 active:scale-95 sm:active:scale-100 hover:shadow-brand-primary/40 sm:hover:-translate-y-1 sm:active:translate-y-0"
             >
               Visit Webnixo
             </a>
             <a
               href="#projects"
-              className="px-10 py-5 rounded-xl glass border border-white/10 font-bold hover:bg-white/5 transition-all w-full sm:w-auto text-center hover:-translate-y-1 active:translate-y-0"
+              className="px-8 sm:px-10 py-4 sm:py-5 rounded-xl glass border border-white/10 font-bold hover:bg-white/5 transition-all w-full sm:w-auto text-center active:scale-95 sm:active:scale-100 sm:hover:-translate-y-1 sm:active:translate-y-0"
             >
               View Portfolio
             </a>

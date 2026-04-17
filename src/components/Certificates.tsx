@@ -152,7 +152,7 @@ export default function Certificates() {
                 <X size={20} />
               </button>
 
-              <div className="grid md:grid-cols-[1.5fr_1fr]">
+              <div className="grid md:grid-cols-[1.5fr_1fr] h-full overflow-y-auto md:overflow-hidden max-h-[90vh]">
                 <div className="aspect-[4/3] md:aspect-auto">
                   <img 
                     src={selectedCert.image} 
@@ -161,25 +161,25 @@ export default function Certificates() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="p-6 md:p-12 flex flex-col justify-center bg-[#030303]">
                   <div className="flex items-center gap-2 text-brand-primary mb-4">
-                    <Award size={20} />
-                    <span className="text-xs font-bold uppercase tracking-widest">{selectedCert.issuer}</span>
+                    <Award size={18} />
+                    <span className="text-[10px] font-bold uppercase tracking-widest">{selectedCert.issuer}</span>
                   </div>
-                  <h3 className="text-3xl font-display font-bold mb-6">{selectedCert.title}</h3>
-                  <p className="text-white/60 leading-relaxed mb-8">
+                  <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 md:mb-6">{selectedCert.title}</h3>
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
                     {selectedCert.desc}
                   </p>
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between py-4 border-y border-white/5">
-                      <span className="text-white/40 text-sm">Category</span>
-                      <span className="text-white font-bold">{selectedCert.category}</span>
+                      <span className="text-white/40 text-xs md:text-sm">Category</span>
+                      <span className="text-white text-sm md:text-base font-bold">{selectedCert.category}</span>
                     </div>
                     <a 
                       href={selectedCert.image} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="w-full py-4 rounded-xl bg-brand-primary text-white font-bold text-center hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20"
+                      className="w-full py-4 rounded-xl bg-brand-primary text-white font-bold text-center hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20 active:scale-[0.98]"
                     >
                       Download Certificate
                     </a>
