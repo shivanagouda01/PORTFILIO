@@ -57,8 +57,9 @@ export default function Education() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              whileHover={{ y: -5, scale: 1.01 }}
               transition={{ delay: index * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 rounded-2xl border border-white/10 glass hover:border-brand-primary/30 transition-all group"
+              className="p-8 rounded-2xl border border-white/10 glass hover:border-brand-primary/30 transition-all group shadow-sm hover:shadow-brand-primary/10"
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 <div className="flex gap-6">

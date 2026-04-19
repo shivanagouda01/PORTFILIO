@@ -76,9 +76,10 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0, y: -20 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="absolute top-full left-0 right-0 glass border-t border-white/10 overflow-hidden md:hidden shadow-2xl"
           >
             <div className="flex flex-col p-6 gap-2">

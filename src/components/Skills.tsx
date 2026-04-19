@@ -74,8 +74,8 @@ export default function Skills() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    whileHover={{ scale: 1.05, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
-                    className="px-6 py-3 rounded-xl glass border border-white/10 text-brand-primary font-bold uppercase tracking-widest text-xs"
+                    whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.15)", rotate: [0, -2, 2, 0] }}
+                    className="px-6 py-3 rounded-xl glass border border-white/10 text-brand-primary font-bold uppercase tracking-widest text-xs cursor-default shadow-sm hover:shadow-brand-primary/20"
                   >
                     {lang}
                   </motion.div>

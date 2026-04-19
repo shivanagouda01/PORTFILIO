@@ -25,7 +25,7 @@ export default function Hero() {
               <img
                 src="https://lh3.googleusercontent.com/d/1HVLiBV8sWqgJTyOeuUu5XrwKVafUcr8I"
                 alt="Shivanagouda Patil"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-105 hover:scale-100"
+                className="w-full h-full object-cover transition-all duration-700 ease-out scale-105 hover:scale-100"
                 referrerPolicy="no-referrer"
               />
             </motion.div>

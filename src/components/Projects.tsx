@@ -71,7 +71,7 @@ export default function Projects() {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover grayscale md:group-hover:grayscale-0 md:group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover md:group-hover:scale-105 transition-all duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030303]/80 via-transparent to-transparent opacity-60 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />

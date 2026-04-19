@@ -63,11 +63,12 @@ export default function Contact() {
                   href={social.link}
                   target="_blank"
                   rel="noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + (index * 0.1), duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="group flex items-center justify-between p-6 rounded-2xl glass border border-white/10 hover:border-brand-primary/30 transition-all"
+                  whileHover={{ scale: 1.02, x: 5 }}
+                  className="group flex items-center justify-between p-6 rounded-2xl glass border border-white/10 hover:border-brand-primary/30 transition-all active:scale-95"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-brand-primary transition-colors">

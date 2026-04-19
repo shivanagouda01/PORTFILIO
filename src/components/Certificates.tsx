@@ -106,7 +106,7 @@ export default function Certificates() {
                   <img 
                     src={cert.image} 
                     alt={cert.title} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />

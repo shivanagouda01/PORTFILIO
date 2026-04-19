@@ -22,7 +22,7 @@ export default function About() {
               I focus on creating real-world solutions that help businesses grow online. My goal is to bridge the gap between complex technology and intuitive user interfaces.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16 p-8 rounded-3xl glass border border-white/5">
               {[
                 { label: "Founder", value: "Webnixo" },
                 { label: "CS Student", value: "AI & ML Focus" },
@@ -31,13 +31,15 @@ export default function About() {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
+                  whileHover={{ y: -5, scale: 1.05 }}
                   transition={{ delay: 0.2 + (index * 0.1), duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="p-4 rounded-2xl transition-colors hover:bg-white/5"
                 >
-                  <div className="text-3xl font-display font-bold text-white mb-1">{stat.label}</div>
-                  <div className="text-sm text-white/40 uppercase tracking-wider">{stat.value}</div>
+                  <div className="text-2xl md:text-3xl font-display font-bold text-white mb-1">{stat.label}</div>
+                  <div className="text-[10px] md:text-sm text-white/40 uppercase tracking-wider font-bold">{stat.value}</div>
                 </motion.div>
               ))}
             </div>
