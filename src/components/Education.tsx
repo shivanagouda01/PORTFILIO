@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
+import ThreeDTilt from "./ThreeDTilt";
+import Animated3DText from "./Animated3DText";
 
 const education = [
   {
@@ -37,7 +39,7 @@ export default function Education() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-4"
           >
-            Education
+            <Animated3DText text="Education" hoverZ={20} />
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +48,7 @@ export default function Education() {
             transition={{ delay: 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl md:text-5xl font-display font-bold"
           >
-            Academic Journey
+            <Animated3DText text="Academic Journey" hoverZ={35} />
           </motion.h3>
         </div>
 
@@ -57,34 +59,47 @@ export default function Education() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.01 }}
-              transition={{ delay: index * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 rounded-2xl border border-white/10 glass hover:border-brand-primary/30 transition-all group shadow-sm hover:shadow-brand-primary/10"
+              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
-                <div className="flex gap-6">
-                  <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0">
-                    <GraduationCap size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-display font-bold mb-2 group-hover:text-brand-primary transition-colors">{item.degree}</h4>
-                    <div className="text-lg font-medium text-white/80 mb-2">{item.institution}</div>
-                    <div className="flex flex-wrap gap-4 text-sm text-white/40">
-                      <div className="flex items-center gap-1">
-                        <Calendar size={14} />
-                        {item.period}
+              <ThreeDTilt intensity={8} className="w-full">
+                <div 
+                  className="p-8 rounded-2xl border border-white/10 glass hover:border-brand-primary/20 transition-all group shadow-sm hover:shadow-brand-primary/10 h-full"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-6" style={{ transformStyle: "preserve-3d" }}>
+                    <div className="flex gap-6" style={{ transformStyle: "preserve-3d" }}>
+                      <div 
+                        className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 transition-transform duration-500 group-hover:scale-110"
+                        style={{ transform: "translateZ(25px)" }}
+                      >
+                        <GraduationCap size={24} />
                       </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin size={14} />
-                        {item.location}
+                      <div style={{ transform: "translateZ(15px)" }}>
+                        <h4 className="text-2xl font-display font-bold mb-2 group-hover:text-brand-primary transition-colors">
+                          <Animated3DText text={item.degree} hoverZ={20} />
+                        </h4>
+                        <div className="text-lg font-medium text-white/80 mb-2">{item.institution}</div>
+                        <div className="flex flex-wrap gap-4 text-sm text-white/40">
+                          <div className="flex items-center gap-1">
+                            <Calendar size={14} />
+                            {item.period}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <MapPin size={14} />
+                            {item.location}
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    <p 
+                      className="md:max-w-xs text-white/60 text-sm leading-relaxed"
+                      style={{ transform: "translateZ(10px)" }}
+                    >
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
-                <p className="md:max-w-xs text-white/60 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
+              </ThreeDTilt>
             </motion.div>
           ))}
         </div>

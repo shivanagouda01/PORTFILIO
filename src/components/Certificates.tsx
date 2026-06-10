@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { ExternalLink, X, Award, Filter } from "lucide-react";
+import ThreeDTilt from "./ThreeDTilt";
+import Animated3DText from "./Animated3DText";
 
 const categories = ["All", "Web Development", "Programming"];
 
@@ -50,7 +52,7 @@ export default function Certificates() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-4"
           >
-            Credentials
+            <Animated3DText text="Credentials" hoverZ={20} />
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +61,7 @@ export default function Certificates() {
             transition={{ delay: 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl md:text-5xl font-display font-bold mb-8"
           >
-            Professional Certifications
+            <Animated3DText text="Professional Certifications" hoverZ={35} />
           </motion.h3>
 
           {/* Filters */}
@@ -102,26 +104,40 @@ export default function Certificates() {
                 className="group cursor-pointer"
                 onClick={() => setSelectedCert(cert)}
               >
-                <div className="relative rounded-2xl overflow-hidden glass border border-white/10 aspect-[4/3]">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.title} 
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="flex items-center gap-2 text-brand-primary mb-2">
-                      <Award size={16} />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">{cert.issuer}</span>
+                <ThreeDTilt intensity={15} className="w-full h-full rounded-2xl">
+                  <div 
+                    className="relative rounded-2xl overflow-hidden glass border border-white/10 aspect-[4/3]"
+                    style={{ transformStyle: "preserve-3d" }}
+                  >
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title} 
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                      style={{ transform: "translateZ(35px)" }}
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                    
+                    <div className="absolute bottom-0 left-0 right-0 p-6" style={{ transformStyle: "preserve-3d" }}>
+                      <div className="flex items-center gap-2 text-brand-primary mb-2" style={{ transform: "translateZ(20px)" }}>
+                        <Award size={16} />
+                        <span className="text-[10px] font-bold uppercase tracking-widest">{cert.issuer}</span>
+                      </div>
+                      <h4 
+                        className="text-xl font-display font-bold text-white mb-2"
+                        style={{ transform: "translateZ(45px)" }}
+                      >
+                        <Animated3DText text={cert.title} hoverZ={20} />
+                      </h4>
+                      <button 
+                        className="flex items-center gap-2 text-xs font-bold text-white/60 group-hover:text-white transition-colors"
+                        style={{ transform: "translateZ(30px)" }}
+                      >
+                        View Certificate <ExternalLink size={14} />
+                      </button>
                     </div>
-                    <h4 className="text-xl font-display font-bold text-white mb-2">{cert.title}</h4>
-                    <button className="flex items-center gap-2 text-xs font-bold text-white/60 group-hover:text-white transition-colors">
-                      View Certificate <ExternalLink size={14} />
-                    </button>
                   </div>
-                </div>
+                </ThreeDTilt>
               </motion.div>
             ))}
           </AnimatePresence>

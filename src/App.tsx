@@ -13,9 +13,13 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Background from "./components/Background";
+import PolicyModal from "./components/PolicyModal";
+import ThreeDCursor from "./components/ThreeDCursor";
 import { motion, useScroll, useSpring } from "motion/react";
+import { useState } from "react";
 
 export default function App() {
+  const [activePolicy, setActivePolicy] = useState<"privacy" | "terms" | null>(null);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -26,6 +30,7 @@ export default function App() {
   return (
     <div className="relative">
       <Background />
+      <ThreeDCursor />
       
       {/* Scroll Progress Bar */}
       <motion.div
@@ -45,7 +50,10 @@ export default function App() {
         <Contact />
       </main>
 
-      <Footer />
+      <Footer onOpenPolicy={(type) => setActivePolicy(type)} />
+
+      {/* Policies Detail Overlay Modal */}
+      <PolicyModal type={activePolicy} onClose={() => setActivePolicy(null)} />
     </div>
   );
 }

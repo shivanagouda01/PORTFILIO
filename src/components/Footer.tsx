@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
 
-export default function Footer() {
+interface FooterProps {
+  onOpenPolicy: (type: "privacy" | "terms") => void;
+}
+
+export default function Footer({ onOpenPolicy }: FooterProps) {
   return (
     <footer className="py-12 px-6 border-t border-white/5">
       <motion.div 
@@ -24,8 +28,20 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-8">
-          <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Terms of Service</a>
+          <button 
+            type="button"
+            onClick={() => onOpenPolicy("privacy")}
+            className="text-sm text-white/40 hover:text-white transition-colors cursor-pointer"
+          >
+            Privacy Policy
+          </button>
+          <button 
+            type="button"
+            onClick={() => onOpenPolicy("terms")}
+            className="text-sm text-white/40 hover:text-white transition-colors cursor-pointer"
+          >
+            Terms of Service
+          </button>
         </div>
       </motion.div>
     </footer>

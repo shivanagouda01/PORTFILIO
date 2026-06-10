@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
+import ThreeDTilt from "./ThreeDTilt";
+import Animated3DText from "./Animated3DText";
 
 const skillPoints = [
   "Building responsive and modern websites using HTML, CSS, and JavaScript",
@@ -25,7 +27,7 @@ export default function Skills() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-4"
           >
-            Expertise
+            <Animated3DText text="Expertise" hoverZ={20} />
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +36,7 @@ export default function Skills() {
             transition={{ delay: 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl md:text-5xl font-display font-bold"
           >
-            Technical Skills
+            <Animated3DText text="Technical Skills" hoverZ={35} />
           </motion.h3>
         </div>
 
@@ -63,24 +65,36 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 rounded-3xl glass border border-white/10"
             >
-              <h4 className="text-2xl font-display font-bold mb-8 text-white">Languages Known</h4>
-              <div className="flex flex-wrap gap-4">
-                {languages.map((lang, index) => (
-                  <motion.div
-                    key={lang}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.15)", rotate: [0, -2, 2, 0] }}
-                    className="px-6 py-3 rounded-xl glass border border-white/10 text-brand-primary font-bold uppercase tracking-widest text-xs cursor-default shadow-sm hover:shadow-brand-primary/20"
+              <ThreeDTilt intensity={8} className="w-full rounded-3xl">
+                <div 
+                  className="p-8 rounded-3xl glass border border-white/10"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <h4 
+                    className="text-2xl font-display font-bold mb-8 text-white"
+                    style={{ transform: "translateZ(15px)" }}
                   >
-                    {lang}
-                  </motion.div>
-                ))}
-              </div>
+                    <Animated3DText text="Languages Known" hoverZ={15} />
+                  </h4>
+                  <div className="flex flex-wrap gap-4" style={{ transformStyle: "preserve-3d" }}>
+                    {languages.map((lang, index) => (
+                      <motion.div
+                        key={lang}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                        whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.15)", rotate: [0, -2, 2, 0] }}
+                        className="px-6 py-3 rounded-xl glass border border-white/10 text-brand-primary font-bold uppercase tracking-widest text-xs cursor-default shadow-sm hover:shadow-brand-primary/20"
+                        style={{ transform: "translateZ(10px)" }}
+                      >
+                        <Animated3DText text={lang} hoverZ={10} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </ThreeDTilt>
             </motion.div>
 
             <motion.div
@@ -88,12 +102,26 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="p-8 rounded-3xl glass border border-white/10 bg-brand-primary/5"
             >
-              <h4 className="text-xl font-display font-bold mb-4 text-white">Continuous Learning</h4>
-              <p className="text-white/50 text-sm leading-relaxed">
-                Always exploring new technologies and methodologies to build better, more efficient digital products.
-              </p>
+              <ThreeDTilt intensity={10} className="w-full rounded-3xl">
+                <div 
+                  className="p-8 rounded-3xl glass border border-white/10 bg-brand-primary/5"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <h4 
+                    className="text-xl font-display font-bold mb-4 text-white"
+                    style={{ transform: "translateZ(20px)" }}
+                  >
+                    <Animated3DText text="Continuous Learning" hoverZ={15} />
+                  </h4>
+                  <p 
+                    className="text-white/50 text-sm leading-relaxed"
+                    style={{ transform: "translateZ(10px)" }}
+                  >
+                    Always exploring new technologies and methodologies to build better, more efficient digital products.
+                  </p>
+                </div>
+              </ThreeDTilt>
             </motion.div>
           </div>
         </div>

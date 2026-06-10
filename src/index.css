@@ -16,6 +16,19 @@
     @apply bg-[#030303] text-white font-sans selection:bg-brand-primary/30 selection:text-white overflow-x-hidden;
   }
 
+  /* Hide default cursor only when the custom 3D cursor is active and rendering */
+  .has-custom-cursor,
+  .has-custom-cursor body,
+  .has-custom-cursor a,
+  .has-custom-cursor button,
+  .has-custom-cursor input,
+  .has-custom-cursor select,
+  .has-custom-cursor textarea,
+  .has-custom-cursor [role="button"],
+  .has-custom-cursor .cursor-pointer {
+    cursor: none !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }

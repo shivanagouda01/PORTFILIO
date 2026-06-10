@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import ThreeDTilt from "./ThreeDTilt";
+import Animated3DText from "./Animated3DText";
 
 export default function About() {
   return (
@@ -11,9 +13,14 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-4">About Me</h2>
+            <h2 className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-4">
+              <Animated3DText text="About Me" hoverZ={20} />
+            </h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">
-              Building the future of <span className="text-brand-primary">digital experiences</span>.
+              <Animated3DText text="Building the future of" hoverZ={30} />{" "}
+              <span className="text-brand-primary">
+                <Animated3DText text="digital experiences." hoverZ={35} />
+              </span>
             </h3>
             <p className="text-xl text-white/60 leading-relaxed mb-8">
               I am a Computer Science (AI & ML) student and founder of Webnixo. I build modern, fast, and user-friendly websites for businesses and startups.
@@ -26,7 +33,7 @@ export default function About() {
               {[
                 { label: "Founder", value: "Webnixo" },
                 { label: "CS Student", value: "AI & ML Focus" },
-                { label: "50+", value: "Projects" },
+                { label: "50+", value: "Projects Completed" },
                 { label: "100%", value: "Commitment" }
               ].map((stat, index) => (
                 <motion.div
@@ -34,12 +41,27 @@ export default function About() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -5, scale: 1.05 }}
                   transition={{ delay: 0.2 + (index * 0.1), duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="p-4 rounded-2xl transition-colors hover:bg-white/5"
                 >
-                  <div className="text-2xl md:text-3xl font-display font-bold text-white mb-1">{stat.label}</div>
-                  <div className="text-[10px] md:text-sm text-white/40 uppercase tracking-wider font-bold">{stat.value}</div>
+                  <ThreeDTilt intensity={20} className="w-full h-full rounded-2xl">
+                    <div 
+                      className="p-4 rounded-2xl transition-colors hover:bg-white/5 cursor-default h-full flex flex-col justify-center"
+                      style={{ transformStyle: "preserve-3d" }}
+                    >
+                      <div 
+                        className="text-2xl md:text-3xl font-display font-bold text-white mb-1"
+                        style={{ transform: "translateZ(30px)" }}
+                      >
+                        <Animated3DText text={stat.label} hoverZ={15} />
+                      </div>
+                      <div 
+                        className="text-[10px] md:text-sm text-white/45 uppercase tracking-wider font-bold"
+                        style={{ transform: "translateZ(15px)" }}
+                      >
+                        <Animated3DText text={stat.value} hoverZ={10} />
+                      </div>
+                    </div>
+                  </ThreeDTilt>
                 </motion.div>
               ))}
             </div>
@@ -49,3 +71,4 @@ export default function About() {
     </section>
   );
 }
+
