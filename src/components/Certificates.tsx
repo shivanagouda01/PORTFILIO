@@ -30,6 +30,14 @@ const certificates = [
     category: "Programming",
     image: "https://lh3.googleusercontent.com/d/1bHuyzP91TUik0MG-UYDeG1KenWW39Fap",
     desc: "Foundational certification in Artificial Intelligence and Machine Learning concepts, algorithms, and real-world applications."
+  },
+  {
+    id: 4,
+    title: "Python Programming",
+    issuer: "Guvi",
+    category: "Programming",
+    image: "https://lh3.googleusercontent.com/d/1pu8IydGSmbM3DcR8qc6cISf4qWENOIOJ",
+    desc: "Professional certification in Python Programming, covering core concepts, data structures, object-oriented programming, and algorithms."
   }
 ];
 
