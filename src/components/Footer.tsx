@@ -15,9 +15,11 @@ export default function Footer({ onOpenPolicy }: FooterProps) {
         className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center text-white font-bold">
-            SP
-          </div>
+          <img
+            src="https://lh3.googleusercontent.com/d/1ih-ub465tBjOwVP2JIe7T21zPhZGk4FP"
+            alt="Shivanagouda Patil"
+            className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-brand-primary/20 border border-white/10"
+          />
           <div className="text-xl font-display font-bold tracking-tight">
             Shivanagouda Patil
           </div>

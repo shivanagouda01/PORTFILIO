@@ -34,8 +34,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-display font-bold tracking-tighter flex items-center gap-2 group">
-          <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center text-white text-base shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform">SP</span>
+        <a href="#" className="text-2xl font-display font-bold tracking-tighter flex items-center gap-3 group">
+          <img
+            src="https://lh3.googleusercontent.com/d/1ih-ub465tBjOwVP2JIe7T21zPhZGk4FP"
+            alt="Shivanagouda Patil"
+            className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform border border-white/10"
+          />
           <span className="hidden sm:inline bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Shivanagouda</span>
         </a>
 
