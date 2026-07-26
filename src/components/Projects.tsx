@@ -5,18 +5,18 @@ import Animated3DText from "./Animated3DText";
 
 const projects = [
   {
-    title: "Webnixo AI Business Platform",
+    title: "Webnixo Business Platform",
     desc: "An intelligent business platform offering AI-enhanced web development, automated workflows, and custom digital solutions.",
     image: "https://lh3.googleusercontent.com/d/1ANBGDSHJgH329bbFfYogmMmxPV6WUlQK",
     tags: ["React", "AI/ML", "Tailwind", "Automation"],
-    link: "https://webnixo.in"
+    link: "https://build.webnixo.in"
   },
   {
-    title: "QR Menu Website",
-    desc: "Digital menu system for restaurants using QR codes. Streamlining the ordering process for modern dining.",
-    image: "https://lh3.googleusercontent.com/d/1GPFtM5_lMJO46IZuVxDCIMrjK9ZEO92z",
-    tags: ["Next.js", "Firebase", "QR"],
-    link: "https://www.webnixo.in"
+    title: "Webnixo AI",
+    desc: "An all-in-one AI platform providing unified access to powerful models like ChatGPT, Gemini, Anthropic, Mistral, and Grok at half the price of a single subscription.",
+    image: "https://lh3.googleusercontent.com/d/1lpoipUdJMl9M6c7PvkocRFKUu7pyZH3t",
+    tags: ["ChatGPT", "Gemini", "Anthropic", "Mistral", "Grok"],
+    link: "https://webnixo.in"
   }
 ];
 
