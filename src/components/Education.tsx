@@ -8,7 +8,7 @@ const education = [
     degree: "B.Tech in Computer Science (AI & ML)",
     institution: "Currently Pursuing",
     period: "Present",
-    location: "Karnataka, India",
+    location: "Vadodara, Gujarat",
     desc: "Focusing on advanced algorithms, machine learning models, and modern software engineering principles."
   },
   {

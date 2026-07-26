@@ -24,7 +24,7 @@ export default function Contact() {
     setSubmitStatus("loading");
 
     // Real world integration backup: Pre-compile mailto link to open email clients nicely
-    const mailtoSubject = encodeURIComponent(formData.subject || "Collaboration Inquiry - Webnixo");
+    const mailtoSubject = encodeURIComponent(formData.subject || "Collaboration Inquiry - Webnixo AI");
     const mailtoBody = encodeURIComponent(`Hi Shivanagouda,\n\nMy name is ${formData.name}. (${formData.email})\n\nMessage:\n${formData.message}\n\n--\nSent via Shivanagouda Patil's Portfolio.`);
     const mailtoLink = `mailto:shiva@webnixo.in?subject=${mailtoSubject}&body=${mailtoBody}`;
 

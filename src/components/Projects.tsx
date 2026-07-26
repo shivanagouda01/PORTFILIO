@@ -5,10 +5,10 @@ import Animated3DText from "./Animated3DText";
 
 const projects = [
   {
-    title: "Webnixo Business Website",
-    desc: "A professional business website for offering web development services. Built with modern tech for maximum performance.",
+    title: "Webnixo AI Business Platform",
+    desc: "An intelligent business platform offering AI-enhanced web development, automated workflows, and custom digital solutions.",
     image: "https://lh3.googleusercontent.com/d/1ANBGDSHJgH329bbFfYogmMmxPV6WUlQK",
-    tags: ["React", "Tailwind", "Motion"],
+    tags: ["React", "AI/ML", "Tailwind", "Automation"],
     link: "https://webnixo.in"
   },
   {

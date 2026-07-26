@@ -23,15 +23,38 @@ export default function About() {
               </span>
             </h3>
             <p className="text-xl text-white/60 leading-relaxed mb-8">
-              I am a Computer Science (AI & ML) student and founder of Webnixo. I build modern, fast, and user-friendly websites for businesses and startups.
+              I am a Computer Science (AI & ML) student and founder of Webnixo AI. At Webnixo AI, we combine cutting-edge artificial intelligence with modern web engineering to build intelligent digital products, automate business workflows, and create seamless user experiences.
             </p>
             <p className="text-xl text-white/60 leading-relaxed mb-12">
-              I focus on creating real-world solutions that help businesses grow online. My goal is to bridge the gap between complex technology and intuitive user interfaces.
+              My goal is to bridge the gap between complex machine learning models and intuitive user interfaces. Here is how Webnixo AI works to deliver next-generation digital solutions:
             </p>
+
+            {/* How Webnixo AI Works */}
+            <div className="grid md:grid-cols-3 gap-6 my-12 text-left">
+              {[
+                { 
+                  title: "1. AI-Driven Discovery & Strategy", 
+                  desc: "We analyze business workflows and data pipelines to identify where artificial intelligence, custom LLMs, and automation can create the highest operational impact." 
+                },
+                { 
+                  title: "2. Intelligent Web Engineering", 
+                  desc: "We develop lightning-fast, scalable web applications integrated with predictive analytics, smart automation bots, and robust backend architectures." 
+                },
+                { 
+                  title: "3. Continuous Optimization", 
+                  desc: "We deploy secure, cloud-native solutions optimized for high conversion rates, automated customer engagement, and continuous learning." 
+                }
+              ].map((step, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-primary/40 transition-colors">
+                  <h4 className="text-lg font-display font-bold text-white mb-2">{step.title}</h4>
+                  <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16 p-8 rounded-3xl glass border border-white/5">
               {[
-                { label: "Founder", value: "Webnixo" },
+                { label: "Founder", value: "Webnixo AI" },
                 { label: "CS Student", value: "AI & ML Focus" },
                 { label: "50+", value: "Projects Completed" },
                 { label: "100%", value: "Commitment" }

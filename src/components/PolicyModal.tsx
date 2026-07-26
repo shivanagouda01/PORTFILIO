@@ -56,7 +56,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
               {isPrivacy ? (
                 <>
                   <p>
-                    Welcome to the portfolio and business website of <strong>Shivanagouda Patil</strong>, founder of <strong>Webnixo</strong>. Your privacy is of paramount importance to us. This Privacy Policy outlines how we collect, use, and safeguard your personal details when you interact with our services, website, or direct touchpoints.
+                    Welcome to the portfolio and business website of <strong>Shivanagouda Patil</strong>, founder of <strong>Webnixo AI</strong>. Your privacy is of paramount importance to us. This Privacy Policy outlines how we collect, use, and safeguard your personal details when you interact with our services, website, or direct touchpoints.
                   </p>
 
                   <div className="space-y-3">
@@ -82,7 +82,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
                       All collected information is treated with highest confidentiality. It is used strictly to:
                     </p>
                     <ul className="list-disc pl-8 space-y-2 text-white/60">
-                      <li>Answer project queries, deliver consulting scopes, and maintain ongoing startup accounts under Webnixo services.</li>
+                      <li>Answer project queries, deliver consulting scopes, and maintain ongoing startup accounts under Webnixo AI services.</li>
                       <li>Diagnose, maintain, and optimize technical aspects of this website and connected server layers.</li>
                       <li>Follow legal regulations and enforce corresponding user-facing agreements.</li>
                     </ul>
@@ -123,7 +123,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
               ) : (
                 <>
                   <p>
-                    By accessing or interacting with this portfolio or the startup workspace of <strong>Webnixo</strong> (owned/operated by <strong>Shivanagouda Patil</strong>), you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any local jurisdictions.
+                    By accessing or interacting with this portfolio or the startup workspace of <strong>Webnixo AI</strong> (owned/operated by <strong>Shivanagouda Patil</strong>), you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any local jurisdictions.
                   </p>
 
                   <div className="space-y-3">
@@ -137,7 +137,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
                     <ul className="list-disc pl-8 space-y-2 text-white/60">
                       <li>Modify or duplicate any of our underlying engineering blueprints, code lines, or design mockups without direct permission.</li>
                       <li>Use our proprietary corporate materials for commercial distribution, or public display of any form.</li>
-                      <li>Attempt to decompile, reverse engineer, or crack database indices of any software contained here or on Webnixo servers.</li>
+                      <li>Attempt to decompile, reverse engineer, or crack database indices of any software contained here or on Webnixo AI servers.</li>
                     </ul>
                   </div>
 
@@ -147,7 +147,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
                       2. Professional Services Limitation
                     </h4>
                     <p className="pl-4">
-                      The materials, digital outputs, and services provided by Shivanagouda Patil and the Webnixo startup team are delivered on an "as is" and "as available" basis. While we commit to the highest industry standards of uptime, response speeds, and engineering craftsmanship, we make no guarantees regarding uninterrupted execution of delivered beta features without custom support agreements.
+                      The materials, digital outputs, and services provided by Shivanagouda Patil and the Webnixo AI startup team are delivered on an "as is" and "as available" basis. While we commit to the highest industry standards of uptime, response speeds, and engineering craftsmanship, we make no guarantees regarding uninterrupted execution of delivered beta features without custom support agreements.
                     </p>
                   </div>
 
@@ -157,7 +157,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
                       3. Limitation of Liability
                     </h4>
                     <p className="pl-4">
-                      In no event shall Shivanagouda Patil, Webnixo, or its verified suppliers be liable for any damages (including, without limitation, damages for loss of business profit, data corruption, or operational interruption) arising out of the use or inability to use the digital services.
+                      In no event shall Shivanagouda Patil, Webnixo AI, or its verified suppliers be liable for any damages (including, without limitation, damages for loss of business profit, data corruption, or operational interruption) arising out of the use or inability to use the digital services.
                     </p>
                   </div>
 
@@ -177,7 +177,7 @@ export default function PolicyModal({ type, onClose }: PolicyModalProps) {
                       5. Governing Law
                     </h4>
                     <p className="pl-4">
-                      Any claim relating to this website or Webnixo services shall be governed by the laws of Karnataka, India, without regard to its conflict of law provisions.
+                      Any claim relating to this website or Webnixo AI services shall be governed by the laws of Karnataka, India, without regard to its conflict of law provisions.
                     </p>
                   </div>
                 </>
