@@ -4,19 +4,15 @@
  */
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Certificates from "./components/Certificates";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Background from "./components/Background";
 import PolicyModal from "./components/PolicyModal";
 import ThreeDCursor from "./components/ThreeDCursor";
 import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Company from "./pages/Company";
 
 export default function App() {
   const [activePolicy, setActivePolicy] = useState<"privacy" | "terms" | null>(null);
@@ -40,15 +36,11 @@ export default function App() {
 
       <Navbar />
       
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Certificates />
-        <Education />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/about" element={<Company />} />
+      </Routes>
 
       <Footer onOpenPolicy={(type) => setActivePolicy(type)} />
 

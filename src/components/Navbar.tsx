@@ -1,18 +1,21 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Education", href: "/#education" },
+  { name: "Company", href: "/company" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -34,27 +37,33 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-display font-bold tracking-tighter flex items-center gap-3 group">
+        <Link to="/" className="text-2xl font-display font-bold tracking-tighter flex items-center gap-3 group">
           <img
             src="https://lh3.googleusercontent.com/d/1ih-ub465tBjOwVP2JIe7T21zPhZGk4FP"
             alt="Shivanagouda Patil"
             className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform border border-white/10"
           />
           <span className="hidden sm:inline bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Shivanagouda</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-semibold text-white/60 hover:text-white transition-all relative group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-primary transition-all group-hover:w-full" />
-            </a>
-          ))}
+          {navLinks.map((link) => {
+             const isActive = link.href.startsWith("/#") 
+               ? location.pathname === "/" && location.hash === link.href.substring(1)
+               : location.pathname === link.href;
+
+             return (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`text-sm font-semibold transition-all relative group ${isActive ? 'text-brand-primary' : 'text-white/60 hover:text-white'}`}
+              >
+                {link.name}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-primary transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+              </a>
+             )
+          })}
           <div className="w-px h-4 bg-white/10" />
           <div className="flex items-center gap-5">
             <a href="https://linkedin.com/in/shivanagouda-patil-8373a8369" target="_blank" rel="noreferrer" className="text-white/60 hover:text-brand-primary transition-colors hover:scale-110">
