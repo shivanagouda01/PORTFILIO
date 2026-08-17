@@ -7,6 +7,7 @@ import Education from "../components/Education";
 import Contact from "../components/Contact";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "motion/react";
 
 export default function Home() {
   const { hash } = useLocation();
@@ -25,15 +26,47 @@ export default function Home() {
     }
   }, [hash]);
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+    }
+  };
+
+  const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      {children}
+    </motion.div>
+  );
+
   return (
     <main>
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certificates />
-      <Education />
-      <Contact />
+      <SectionWrapper>
+        <About />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Skills />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Projects />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Certificates />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Education />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Contact />
+      </SectionWrapper>
     </main>
   );
 }
