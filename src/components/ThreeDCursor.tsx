@@ -57,11 +57,7 @@ export default function ThreeDCursor() {
       setIsVisible(true);
 
       const clickable = targetEl ? (
-        targetEl.closest("a") || 
-        targetEl.closest("button") || 
-        targetEl.closest(".cursor-pointer") || 
-        targetEl.tagName === "INPUT" || 
-        targetEl.tagName === "TEXTAREA"
+        targetEl.closest("a, button, .cursor-pointer, input, textarea")
       ) as HTMLElement | null : null;
 
       if (clickable) {
