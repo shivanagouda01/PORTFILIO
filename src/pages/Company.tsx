@@ -1,11 +1,6 @@
 import { motion } from "motion/react";
-import { useEffect } from "react";
 
 export default function Company() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
   return (
     <section className="pt-32 pb-20 min-h-screen relative flex items-center justify-center px-6">
       <div className="max-w-4xl mx-auto w-full">

@@ -9,14 +9,30 @@ import Background from "./components/Background";
 import PolicyModal from "./components/PolicyModal";
 import ThreeDCursor from "./components/ThreeDCursor";
 import { motion, useScroll, useSpring } from "motion/react";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Company from "./pages/Company";
 
 export default function App() {
   const [activePolicy, setActivePolicy] = useState<"privacy" | "terms" | null>(null);
   const { scrollYProgress } = useScroll();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,

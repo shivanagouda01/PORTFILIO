@@ -53,16 +53,16 @@ export default function Navbar() {
                ? location.pathname === "/" && location.hash === link.href.substring(1)
                : location.pathname === link.href;
 
-             return (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`text-sm font-semibold transition-all relative group ${isActive ? 'text-brand-primary' : 'text-white/60 hover:text-white'}`}
-              >
-                {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-primary transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-              </a>
-             )
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={`text-sm font-semibold transition-all relative group ${isActive ? 'text-brand-primary' : 'text-white/60 hover:text-white'}`}
+                >
+                  {link.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-primary transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                </Link>
+              )
           })}
           <div className="w-px h-4 bg-white/10" />
           <div className="flex items-center gap-5">
@@ -97,17 +97,20 @@ export default function Navbar() {
           >
             <div className="flex flex-col p-6 gap-2">
               {navLinks.map((link, idx) => (
-                <motion.a
+                <motion.div
+                  key={link.name}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
-                  key={link.name}
-                  href={link.href}
-                  onClick={handleNavLinkClick}
-                  className="text-xl font-bold py-4 px-4 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-all border border-transparent hover:border-white/5"
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    onClick={handleNavLinkClick}
+                    className="block text-xl font-bold py-4 px-4 rounded-xl hover:bg-white/5 text-white/70 hover:text-white transition-all border border-transparent hover:border-white/5"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
               <div className="pt-6 mt-4 border-t border-white/5 flex items-center justify-around">
                 <a href="https://linkedin.com/in/shivanagouda-patil-8373a8369" target="_blank" rel="noreferrer" className="p-4 rounded-2xl glass text-brand-primary">
