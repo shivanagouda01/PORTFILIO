@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
 import ThreeDTilt from "./ThreeDTilt";
 import Animated3DText from "./Animated3DText";
+import LanguageBalls from "./LanguageBalls";
 
 const skillPoints = [
   "Building responsive and modern websites using HTML, CSS, and JavaScript",
@@ -12,8 +13,6 @@ const skillPoints = [
   "Familiar with tools like GitHub and VS Code",
   "Focused on writing clean, efficient, and user-friendly code"
 ];
-
-const languages = ["C", "C++", "HTML & CSS", "JavaScript", "Python"];
 
 export default function Skills() {
   return (
@@ -66,35 +65,10 @@ export default function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <ThreeDTilt intensity={8} className="w-full rounded-3xl">
-                <div 
-                  className="p-8 rounded-3xl glass border border-white/10"
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  <h4 
-                    className="text-2xl font-display font-bold mb-8 text-white"
-                    style={{ transform: "translateZ(15px)" }}
-                  >
-                    <Animated3DText text="Languages Known" hoverZ={15} />
-                  </h4>
-                  <div className="flex flex-wrap gap-4" style={{ transformStyle: "preserve-3d" }}>
-                    {languages.map((lang, index) => (
-                      <motion.div
-                        key={lang}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                        whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.15)", rotate: [0, -2, 2, 0] }}
-                        className="px-6 py-3 rounded-xl glass border border-white/10 text-brand-primary font-bold uppercase tracking-widest text-xs cursor-default shadow-sm hover:shadow-brand-primary/20"
-                        style={{ transform: "translateZ(10px)" }}
-                      >
-                        <Animated3DText text={lang} hoverZ={10} />
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </ThreeDTilt>
+              <h4 className="text-2xl font-display font-bold mb-6 text-white">
+                Languages Known
+              </h4>
+              <LanguageBalls />
             </motion.div>
 
             <motion.div
