@@ -56,6 +56,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/company" element={<Company />} />
         <Route path="/about" element={<Company />} />
+        <Route path="*" element={<Home />} />
       </Routes>
 
       <Footer onOpenPolicy={(type) => setActivePolicy(type)} />
