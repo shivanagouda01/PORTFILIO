@@ -15,7 +15,8 @@ async function startServer() {
     app.use(vite.middlewares);
     
     // Explicit fallback for SPA in development
-    app.use('*', async (req, res, next) => {
+    app.get('*', async (req, res, next) => {
+      console.log("Fallback hit for URL:", req.originalUrl);
       const url = req.originalUrl;
       try {
         let template = await require('fs').promises.readFile(
