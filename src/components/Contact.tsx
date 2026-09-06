@@ -24,9 +24,9 @@ export default function Contact() {
     setSubmitStatus("loading");
 
     // Real world integration backup: Pre-compile mailto link to open email clients nicely
-    const mailtoSubject = encodeURIComponent(formData.subject || "Collaboration Inquiry - Webnixo AI");
+    const mailtoSubject = encodeURIComponent(formData.subject || "Collaboration Inquiry - Emvilo");
     const mailtoBody = encodeURIComponent(`Hi Shivanagouda,\n\nMy name is ${formData.name}. (${formData.email})\n\nMessage:\n${formData.message}\n\n--\nSent via Shivanagouda Patil's Portfolio.`);
-    const mailtoLink = `mailto:shiva@webnixo.in?subject=${mailtoSubject}&body=${mailtoBody}`;
+    const mailtoLink = `mailto:shiva@emvilo.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
     // Simulate database write/transmission load
     setTimeout(() => {
@@ -88,11 +88,11 @@ export default function Contact() {
                 className="flex flex-wrap gap-6"
               >
                 <a 
-                  href="mailto:shiva@webnixo.in" 
+                  href="mailto:shiva@emvilo.com" 
                   className="flex items-center gap-3 px-6 py-3 rounded-xl glass border border-white/10 hover:bg-white/5 transition-all text-lg font-medium"
                 >
                   <Mail size={20} className="text-brand-primary" />
-                  shiva@webnixo.in
+                  shiva@emvilo.com
                 </a>
               </motion.div>
             </div>

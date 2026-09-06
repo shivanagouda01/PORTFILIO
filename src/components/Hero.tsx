@@ -27,7 +27,7 @@ export default function Hero() {
                 style={{ transform: "translateZ(80px)" }}
               >
                 <span className="text-brand-secondary text-xs">✦</span>
-                <span className="font-mono text-[10px] font-bold text-white tracking-wider">Webnixo AI Founder</span>
+                <span className="font-mono text-[10px] font-bold text-white tracking-wider">Emvilo Founder</span>
               </div>
 
               {/* Glowing Decorative Ring at intermediate depth */}
@@ -65,7 +65,7 @@ export default function Hero() {
                 className="inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-[10px] font-bold uppercase tracking-widest mb-8 border border-brand-primary/20"
                 style={{ transform: "translateZ(30px)" }}
               >
-                Founder of Webnixo AI
+                Founder of Emvilo
               </motion.div>
 
               <motion.h1
@@ -88,7 +88,7 @@ export default function Hero() {
                 className="text-xl text-white/80 font-medium mb-8"
                 style={{ transform: "translateZ(40px)" }}
               >
-                Web Developer | Founder of Webnixo AI
+                Developer • Builder • Founder of Emvilo
               </motion.p>
 
               <motion.p
@@ -98,7 +98,7 @@ export default function Hero() {
                 className="text-lg text-white/50 mb-12 max-w-lg mx-auto md:mx-0 leading-relaxed"
                 style={{ transform: "translateZ(30px)" }}
               >
-                I am a Computer Science (AI & ML) student and founder of Webnixo AI. We build modern, AI-enhanced websites and intelligent web applications for businesses and startups.
+                I am a Computer Science (AI & ML) student and founder of Emvilo. Building innovative digital products across AI, software, education, games, apps, and SaaS.
               </motion.p>
 
               <motion.div
@@ -109,12 +109,12 @@ export default function Hero() {
                 style={{ transform: "translateZ(45px)", transformStyle: "preserve-3d" }}
               >
                 <a
-                  href="https://webnixo.in"
+                  href="https://emvilo.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 sm:px-10 py-4 sm:py-5 rounded-xl bg-brand-primary text-white font-bold hover:bg-brand-primary/90 transition-all w-full sm:w-auto text-center shadow-lg shadow-brand-primary/20 active:scale-95 sm:active:scale-100 hover:shadow-brand-primary/40 sm:hover:-translate-y-1 sm:active:translate-y-0"
                 >
-                  Visit Webnixo AI
+                  Visit Emvilo
                 </a>
                 <a
                   href="#projects"

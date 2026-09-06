@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 import Certificates from "../components/Certificates";
 import Education from "../components/Education";
 import Contact from "../components/Contact";
-import { useEffect } from "react";
+import { useEffect, ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "motion/react";
 
@@ -35,7 +35,7 @@ export default function Home() {
     }
   };
 
-  const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
+  const SectionWrapper = ({ children }: { children: ReactNode }) => (
     <motion.div
       initial="hidden"
       whileInView="visible"

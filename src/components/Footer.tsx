@@ -20,8 +20,13 @@ export default function Footer({ onOpenPolicy }: FooterProps) {
             alt="Shivanagouda Patil"
             className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-brand-primary/20 border border-white/10"
           />
-          <div className="text-xl font-display font-bold tracking-tight">
-            Shivanagouda Patil
+          <div>
+            <div className="text-xl font-display font-bold tracking-tight">
+              Shivanagouda Patil
+            </div>
+            <div className="text-xs text-white/50 font-mono flex items-center gap-2 mt-0.5">
+              Founder of Emvilo <span className="text-white/20">•</span> <a href="mailto:shiva@emvilo.com" className="hover:text-brand-primary transition-colors">shiva@emvilo.com</a>
+            </div>
           </div>
         </div>
 

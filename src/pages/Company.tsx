@@ -11,7 +11,7 @@ export default function Company() {
           className="glass rounded-[2.5rem] p-8 md:p-16 border border-white/10"
         >
           <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-            Webnixo AI
+            Emvilo
           </h1>
           <h2 className="text-xl text-brand-primary font-mono mb-8 tracking-wide uppercase">
             Founded by Shivanagouda Patil
@@ -33,14 +33,14 @@ export default function Company() {
               <div className="space-y-4">
                 <p>
                   <strong className="text-white">Official Website:</strong>{" "}
-                  <a href="https://webnixo.in" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                    webnixo.in
+                  <a href="https://emvilo.com" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                    emvilo.com
                   </a>
                 </p>
                 <p>
                   <strong className="text-white">Contact:</strong>{" "}
-                  <a href="mailto:shiva@webnixo.in" className="text-brand-primary hover:underline">
-                    shiva@webnixo.in
+                  <a href="mailto:shiva@emvilo.com" className="text-brand-primary hover:underline">
+                    shiva@emvilo.com
                   </a>
                 </p>
                 <p>
@@ -53,9 +53,9 @@ export default function Company() {
             </div>
 
             <div className="mt-12 pt-12 border-t border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-4">What Webnixo Does</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">What Emvilo Does</h3>
               <p className="mb-4">
-                Webnixo AI is an intelligent business platform that combines cutting-edge artificial intelligence with modern web engineering. We build lightning-fast, scalable web applications integrated with predictive analytics, smart automation bots, and robust backend architectures.
+                Emvilo is an intelligent business platform that combines cutting-edge artificial intelligence with modern web engineering. We build lightning-fast, scalable web applications integrated with predictive analytics, smart automation bots, and robust backend architectures.
               </p>
               <p>
                 Our all-in-one AI platform also provides unified access to powerful models like ChatGPT, Gemini, Anthropic, Mistral, and Grok at half the price of a single subscription, enabling businesses to leverage state-of-the-art AI cost-effectively.
@@ -64,12 +64,12 @@ export default function Company() {
             
             <div className="mt-12 text-center">
                <a 
-                 href="https://webnixo.in" 
+                 href="https://emvilo.com" 
                  target="_blank"
                  rel="noopener noreferrer"
                  className="inline-flex items-center gap-2 px-8 py-4 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20"
                >
-                 Visit Webnixo AI Official Site
+                 Visit Emvilo Official Site
                </a>
             </div>
           </div>

@@ -23,13 +23,13 @@ export default function About() {
               </span>
             </h3>
             <p className="text-xl text-white/60 leading-relaxed mb-8">
-              I am a Computer Science (AI & ML) student and founder of Webnixo AI. At Webnixo AI, we combine cutting-edge artificial intelligence with modern web engineering to build intelligent digital products, automate business workflows, and create seamless user experiences.
+              I am a Computer Science (AI & ML) student and founder of Emvilo. At Emvilo, we build innovative digital products across AI, software, education, games, apps, and SaaS.
             </p>
             <p className="text-xl text-white/60 leading-relaxed mb-12">
-              My goal is to bridge the gap between complex machine learning models and intuitive user interfaces. Here is how Webnixo AI works to deliver next-generation digital solutions:
+              My goal is to bridge the gap between complex machine learning models and intuitive user interfaces. Here is how Emvilo works to deliver next-generation digital solutions:
             </p>
 
-            {/* How Webnixo AI Works */}
+            {/* How Emvilo Works */}
             <div className="grid md:grid-cols-3 gap-6 my-12 text-left">
               {[
                 { 
@@ -54,7 +54,7 @@ export default function About() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16 p-8 rounded-3xl glass border border-white/5">
               {[
-                { label: "Founder", value: "Webnixo AI" },
+                { label: "Founder", value: "Emvilo" },
                 { label: "CS Student", value: "AI & ML Focus" },
                 { label: "50+", value: "Projects Completed" },
                 { label: "100%", value: "Commitment" }
